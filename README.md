@@ -35,6 +35,7 @@ examples of how these transforms are done.
 
 ### Setup
 
+- `cd into the org-authz-example directory`
 - `docker-compose up -d`
 - `cd /hasura`
 - `hasura metadata apply --endpoint "http://localhost:8081"`
