@@ -1,0 +1,38 @@
+actions:
+  - name: resTransformOne
+    definition:
+      kind: ""
+      handler: http://host.docker.internal:3005
+      request_transform:
+        method: GET
+        query_params: {}
+        request_headers:
+          add_headers: {}
+          remove_headers:
+            - content-type
+        template_engine: Kriti
+        url: '{{$base_url}}/example-one'
+        version: 2
+  - name: resTransformTwo
+    definition:
+      kind: ""
+      handler: http://host.docker.internal:3005
+      request_transform:
+        method: GET
+        query_params: {}
+        request_headers:
+          add_headers: {}
+          remove_headers:
+            - content-type
+        template_engine: Kriti
+        url: '{{$base_url}}/example-two'
+        version: 2
+custom_types:
+  enums: []
+  input_objects:
+    - name: SampleInput
+  objects:
+    - name: Event
+    - name: Calendar
+    - name: DatesArray
+  scalars: []

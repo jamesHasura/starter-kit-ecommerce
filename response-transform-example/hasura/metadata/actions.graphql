@@ -1,0 +1,25 @@
+type Query {
+  resTransformOne: DatesArray
+}
+
+type Query {
+  resTransformTwo: Calendar
+}
+
+input SampleInput {
+  eventId: String!
+}
+
+type Event {
+  date: String
+  onSale: Boolean
+}
+
+type Calendar {
+  calendar: [Event]
+}
+
+type DatesArray {
+  date: [String]
+}
+

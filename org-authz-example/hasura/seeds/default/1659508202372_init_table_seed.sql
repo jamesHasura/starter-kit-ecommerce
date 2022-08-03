@@ -1,0 +1,12 @@
+SET check_function_bodies = false;
+INSERT INTO public.organization (id, name) VALUES (1, 'Test Organization ');
+INSERT INTO public.organization (id, name) VALUES (2, 'Test Organization 2 ');
+INSERT INTO public."user" (id, name, email) VALUES (1, 'john ', 'john@test.com');
+INSERT INTO public."user" (id, name, email) VALUES (2, 'frank', 'frank@test.com');
+INSERT INTO public."user" (id, name, email) VALUES (3, 'jane', 'jane@test.com');
+INSERT INTO public.organization_user (id, user_id, organization_id) VALUES (1, 1, 1);
+INSERT INTO public.organization_user (id, user_id, organization_id) VALUES (2, 2, 1);
+INSERT INTO public.organization_user (id, user_id, organization_id) VALUES (3, 3, 2);
+SELECT pg_catalog.setval('public.organization_id_seq', 2, true);
+SELECT pg_catalog.setval('public.organization_user_id_seq', 3, true);
+SELECT pg_catalog.setval('public.user_id_seq', 3, true);
