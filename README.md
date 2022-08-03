@@ -17,15 +17,13 @@ instructions on how to install:
 
 ### Setup
 
+- `cd into the reponse-transform-example directory`
 - `docker-compose up -d`
-- `cd /hasura`
-- `hasura metadata apply`
-- `hasura migrate apply`
-- `hasura metadata clear`
-- `hasura metadata apply`
 - `cd ../data-api`
 - `npm install`
 - `npm start`
+- `navigate in browser to <http://localhost:8085/console/settings/metadata-actions>`
+- `import the hasura_sample_metadata.json file from the root of the example directory`
 
 ### Overview
 
@@ -39,13 +37,11 @@ examples of how these transforms are done.
 
 - `docker-compose up -d`
 - `cd /hasura`
-- `hasura metadata apply`
-- `hasura migrate apply`
+- `hasura metadata apply --endpoint "http://localhost:8081"`
+- `hasura migrate apply --endpoint "http://localhost:8081"`
+- `hasura seed apply --file 1659508202372_init_table_seed.sql --endpoint "http://localhost:8081"`
 - `hasura metadata clear`
 - `hasura metadata apply`
-- `cd ../data-api`
-- `npm install`
-- `npm start`
 
 ### Overview
 
