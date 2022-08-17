@@ -19,7 +19,7 @@ instructions on how to install:
 
 - `cd into the reponse-transform-example directory`
 - `docker-compose up -d`
-- `cd ./data-api`
+- `cd ../data-api`
 - `npm install`
 - `npm start`
 - `navigate in browser to <http://localhost:8085/console/settings/metadata-actions>`
@@ -37,15 +37,17 @@ examples of how these transforms are done.
 
 - `cd into the org-authz-example directory`
 - `docker-compose up -d`
-- `cd ./hasura`
+- `cd /hasura`
 - `hasura metadata apply --endpoint "http://localhost:8081"`
 - `hasura migrate apply --endpoint "http://localhost:8081"`
 - `hasura seed apply --file 1659508202372_init_table_seed.sql --endpoint "http://localhost:8081"`
+- `hasura metadata clear`
+- `hasura metadata apply`
 
 ### Overview
 
 This project showcases how you can use Hasura's standard permission system to
-create an organization based authz scheme. This is a common pattern needed in
+create a organization based authz scheme. This is a common pattern needed in
 various applications in which permissions must be implemented such that:
 
 "Each entity in the group should only be able to see/interact with other
